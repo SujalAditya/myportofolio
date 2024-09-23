@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typed.js and Repeat Example</title>
+    <style>
+        #element {
+            font-size: 24px;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+    </style>
+    <!-- Typed.js library -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+<body>
+
+    <span id="element"></span> <!-- Using span here -->
+
+    <script>
+        // Typed.js initialization
+        var typed = new Typed('#element', {
+            strings: ['Web Designer', 'Web Developer'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true  // Optional: loop the typing animation
+        });
+
+        // Define the text to repeat (only if needed after animation)
+        // Repeat the text 5 times
+        var repeatedText = text.repeat(5);
+
+        // Set the repeated text inside the span element after the typing animation
+        // You might want to delay this if you want it to appear after typing completes
+        setTimeout(function() {
+            document.getElementById('element').innerText = repeatedText;
+        }, 5000); // Delay the appearance of the repeated text by 5 seconds
+    </script>
+
+</body>
+</html>
